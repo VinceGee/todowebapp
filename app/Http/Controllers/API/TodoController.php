@@ -32,10 +32,12 @@ class TodoController extends Controller
         $validator = Validator::make($request->all(), [
             'title'            => 'required',
             'description'            => 'required',
+            'due_date_time'            => 'required',
         ],
             [
                 'title.required' => 'The title of the ToDo task is required',
                 'description.required' => 'The description of the ToDo task is required',
+                'due_date_time.required' => 'When is it Due?',
             ]
 
         );
